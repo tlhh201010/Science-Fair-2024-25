@@ -1,0 +1,11 @@
+import math
+divisors = []
+number = int(input("pick an integer: "))
+for i in range(1, math.ceil(math.sqrt(number))+1):
+  if number / i == int(number / i):
+    divisors.append(i)
+    divisors.append(int(number / i))
+x = len(divisors)
+if divisors[x-1] == divisors[x-2]:
+  divisors.pop(x-1)
+print(divisors)
